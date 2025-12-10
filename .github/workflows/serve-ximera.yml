@@ -42,8 +42,9 @@ jobs:
 
       - name: Build and publish Ximera courses
         env:
-          GPG_KEY: ${{ secrets.GPG_KEY }}
-          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          ### Use .xmKeyfile for test/demo
+          # GPG_KEY: ${{ secrets.GPG_KEY }}
+          # GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           XIMERA_URL: "https://xerxes.ximera.org/"
           XIMERA_NAME: ${{ github.repository_owner }}-${{ github.event.repository.name }}
           XM_COMPILE_SEQUENCE: "html,handout.pdf"
